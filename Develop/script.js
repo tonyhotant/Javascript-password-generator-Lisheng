@@ -10,12 +10,10 @@ function generatePassword() {
   //prompt user for length of password
   var passwordLength = prompt("Please enter the length of password:");
 
-  if (passwordLength < 8 || passwordLength >= 128) {
-    if (passwordLength === null) {
-      alert("You must enter a password length.");
-    } else {
-      alert("Password length should be between 8 and 128 characters.");
-    }
+  if (passwordLength === null) {
+    alert("You must enter a number for password length.");
+  } else if (passwordLength < 8 || passwordLength >= 128) {
+    alert("Password length should be between 8 and 128 characters.");
   } else {
     //prompt user for series of criteria types
     var criteria = " ";
@@ -33,7 +31,7 @@ function generatePassword() {
       criteria += specChar;
     }
     if (criteria == " ") {
-      alert("At least one type of criteria should be selected");
+      alert("You must select at least one type of criteria");
     }
 
     //random pickup characters from selected criteria string to generate new password
@@ -53,7 +51,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);

@@ -1,20 +1,16 @@
 # 03 JavaScript: Password Generator
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+Create a web-based password generator which is able to meets certain criteria hence provides greater security
 
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
+## Repository
 
-## User Story
+1. Develop folder include html, css and javascript files
+2. asset include an example of password generator
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+![Screenshot](Assets/03-javascript-homework-demo.png)
 
 ## Acceptance Criteria
 
-```
 GIVEN I need a new, secure password
 
 WHEN I click the button to generate a password
@@ -37,19 +33,17 @@ THEN a password is generated that matches the selected criteria
 
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
-```
 
-The following image demonstrates the application functionality:
+## Usage
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+- The URL of the deployed application: <https://tonyhotant.github.io/Javascript-password-generator-Lisheng/>
 
-## Review
+- The URL of the GitHub repository: <https://github.com/tonyhotant/Javascript-password-generator-Lisheng>
 
-You are required to submit the following for review:
+## Log
 
-* The URL of the deployed application.
+v1.0 29/02/20 initial release
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+## To do
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+1.cleaner code
