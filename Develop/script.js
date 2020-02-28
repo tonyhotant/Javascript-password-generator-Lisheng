@@ -7,16 +7,17 @@ var specChar = "~!@#$%^&*()_+{}[];'/?.,><";
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-
   //prompt user for length of password
   var passwordLength = prompt("Please enter the length of password:");
 
   if (passwordLength < 8 || passwordLength >= 128) {
-    alert("Password length should be between 8 and 128 characters.");
-  } 
-  
-    else {
-    //prompt user for series of criteria type
+    if (passwordLength === null) {
+      alert("You must enter a password length.");
+    } else {
+      alert("Password length should be between 8 and 128 characters.");
+    }
+  } else {
+    //prompt user for series of criteria types
     var criteria = " ";
 
     if (confirm("Do you want to use lowercase in password?")) {
@@ -30,11 +31,12 @@ function generatePassword() {
     }
     if (confirm("Do you want to use special characters in password?")) {
       criteria += specChar;
-    } else {
+    }
+    if (criteria == " ") {
       alert("At least one type of criteria should be selected");
     }
 
-    //random pickup character from criteria string to generate new password
+    //random pickup characters from selected criteria string to generate new password
     var newPassword = " ";
 
     for (let i = 0; i < passwordLength; i++) {
@@ -55,10 +57,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-/*
-TO DO: 
-at least one type criteria to be selected
-prompt text box placeholder
-readme file
-*/
