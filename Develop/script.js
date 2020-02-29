@@ -38,7 +38,7 @@ function generatePassword() {
     var newPassword = " ";
 
     for (let i = 0; i < passwordLength; i++) {
-      var index = Math.floor(Math.random() * criteria.length + 0);
+      var index = Math.floor(Math.random() * criteria.length);
       newPassword += criteria.charAt(index);
     }
     return newPassword;
