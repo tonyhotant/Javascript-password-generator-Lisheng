@@ -16,7 +16,7 @@ function generatePassword() {
     alert("Password length should be between 8 and 128 characters.");
   } else {
     //prompt user for series of criteria types
-    var criteria = " ";
+    var criteria = "";
 
     if (confirm("Do you want to use lowercase in password?")) {
       criteria += lowCase;
@@ -35,7 +35,7 @@ function generatePassword() {
     }
 
     //random pickup characters from selected criteria string to generate new password
-    var newPassword = " ";
+    var newPassword = "";
 
     for (let i = 0; i < passwordLength; i++) {
       var index = Math.floor(Math.random() * criteria.length);
