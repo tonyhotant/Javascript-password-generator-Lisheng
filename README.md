@@ -44,4 +44,4 @@ THEN the password is either displayed in an alert or written to the page
 
 v1.0 29/02/20 initial release
 
-## To do
+v1.1 6/4/20 deployed

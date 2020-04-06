@@ -1,4 +1,3 @@
-// Assignment Code
 var lowCase = "abcdefghijklmnopqrstuvwxyz";
 var upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numeric = "0123456789";
@@ -7,7 +6,6 @@ var specChar = "~!@#$%^&*()_+{}[];'/?.,><";
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  //prompt user for length of password
   var passwordLength = prompt("Please enter the length of password:");
 
   if (passwordLength === null) {
@@ -48,9 +46,12 @@ function generatePassword() {
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+  if (password == null) {
+    return;
+  } else {
+    var passwordText = document.querySelector("#password");
+    passwordText.value = password;
+  }
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
